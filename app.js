@@ -404,9 +404,9 @@ function totp(sk) {
 function timer() {
 	var epoch = Math.round(new Date().getTime() / 1000.0);
 	var countDown = 30 - epoch % 30;
-	if (epoch % 30 == 0) {	
+	// if (epoch % 30 == 0) {	
 		updatetotp()
-	}
+	// }
 
 
 	setProgress = percent=>{
