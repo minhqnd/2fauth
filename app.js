@@ -171,12 +171,16 @@ firebase.auth().onAuthStateChanged((user) => {
 		window.open('/accounts', "_self");
 	} else if (page=='reset') {
 		window.open('/accounts', "_self");
+	} else if (page=='index') {
+		window.open('/accounts', "_self");
 	}
   } else {
     console.log('User is signed out, redirect to login page...');
 	if (page=='accounts') {
 		window.open('/login', "_self");
 	} else if (page=='edit') {
+		window.open('/login', "_self");
+	} else if (page=='index') {
 		window.open('/login', "_self");
 	}
 	}
