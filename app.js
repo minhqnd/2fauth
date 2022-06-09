@@ -19,9 +19,10 @@ function register() {
 }
 
 function editacc() {
-	// if (keyedit==null) {
-		// console.log('return to accs');
-	// }
+	if (keyedit==null) {
+		console.log('return to accs');
+		window.open('/accounts', "_self");
+	}
 	document.querySelector('#save').addEventListener('click', () => {
         editfa()
     })
