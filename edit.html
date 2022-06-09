@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)https://demo.2fauth.app/account/create -->
+<html class="has-background-black-ter" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, shrink-to-fit=no, viewport-fit=cover">
+    <meta name="csrf-token" content="9It5loP1T6ca4JoXYvsoFZKfixQ12Tk8xgohwMQe">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>2FAuth</title>
+	<link rel="shortcut icon" href="https://demo.2fauth.app/favicon.ico">
+    <link rel="icon" type="image/png" href="https://demo.2fauth.app/favicon.png">
+    <link rel="apple-touch-icon" href="https://demo.2fauth.app/favicon_lg.png">
+    <link rel="apple-touch-icon-precomposed" href="https://demo.2fauth.app/favicon_lg.png">
+    <link href="./app.css" rel="stylesheet">
+</head>
+<body class="has-text-lighter">
+    <div id="app"><div><div></div><div class="vue-notification-group" style="width: 100%; top: 0px;"><span></span></div> <main class="main-section"><div><!----> <div class="columns is-centered"><div class="form-column column is-two-thirds-tablet is-half-desktop is-one-third-widescreen is-one-third-fullhd"><h1 class="title has-text-grey-dark">Edit account</h1> <!----> 
+	<!-- <div class="field"><div class="file is-black is-small"><label title="Use a QR code to fill the form magically" class="file-label"><input type="file" accept="image/*" class="file-input">  -->
+	<!-- <span class="file-cta"> -->
+	<!-- <span class="file-icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="qrcode" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-qrcode fa-w-14 fa-lg"><path fill="currentColor" d="M0 224h192V32H0v192zM64 96h64v64H64V96zm192-64v192h192V32H256zm128 128h-64V96h64v64zM0 480h192V288H0v192zm64-128h64v64H64v-64zm352-64h32v128h-96v-32h-32v96h-64V288h96v32h64v-32zm0 160h32v32h-32v-32zm-64 0h32v32h-32v-32z" class=""></path></svg></span>  -->
+	<!-- <span class="file-label">Prefill using a QR Code</span> -->
+	<!-- </span> -->
+	<!-- </label></div></div> -->
+	<div class="field"><label class="label">Service</label> <div class="control"><input id="name" placeholder="example.com" type="text" autofocus="autofocus" class="input"></div></div> <div class="field"><label class="label">Account</label> <div class="control"><input id="account" placeholder="John DOE" type="text" class="input"></div> <p id="account-help" class="help is-danger"></p></div> 
+<!-- <div class="field"><label class="label">Icon</label> <div class="file is-dark"><label class="file-label"><input type="file" accept="image/*" class="file-input"> <span class="file-cta"><span class="file-icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="image" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-image fa-w-16"><path fill="currentColor" d="M464 448H48c-26.51 0-48-21.49-48-48V112c0-26.51 21.49-48 48-48h416c26.51 0 48 21.49 48 48v288c0 26.51-21.49 48-48 48zM112 120c-30.928 0-56 25.072-56 56s25.072 56 56 56 56-25.072 56-56-25.072-56-56-56zM64 384h384V272l-87.515-87.515c-4.686-4.686-12.284-4.686-16.971 0L208 320l-55.515-55.515c-4.686-4.686-12.284-4.686-16.971 0L64 336v48z" class=""></path></svg></span> <span class="file-label">Choose an image…</span></span></label></div></div> -->
+	<!-- <div class="field has-uppercased-button with-offset"><label class="label">Choose the type of OTP to create</label> <div class="is-toggle buttons"><label class="button is-dark is-link"><input type="radio" class="is-hidden" value="totp"> TOTP -->
+        <!-- </label><label class="button is-dark"><input type="radio" class="is-hidden" value="hotp">HOTP -->
+        <!-- </label></div> <p class="help">Time-based OTP or HMAC-based OTP</p></div> -->
+		<div><label class="label">Secret</label> <div class="field has-addons"><p class="control">
+		<!-- <span class="select"><select><option value="0">Plain text</option><option value="1">Base32</option></select></span> -->
+		</p> <p class="control is-expanded"><input id='key' type="text" class="input" placeholder="BK5V TVQ7 D2RB..."></p></div> <div class="field"><p id="key-help" class="help is-danger help-for-file"></p> <p class="help">The key used to generate your security codes</p></div> <h2 class="title is-4 mt-5 mb-2">Options</h2> <p class="help mb-4">
+                    You can leave the following options blank if you don't know how to set them. The most commonly used values will be applied.
+                </p> <div class="field"><label class="label">Digits</label> <div class="is-toggle buttons"><label class="button is-dark is-link"><input type="radio" class="is-hidden" value="6"> <!----> 6
+        </label><label class="button is-dark"><input type="radio" class="is-hidden" value="7"> <!----> 7
+        </label><label class="button is-dark"><input type="radio" class="is-hidden" value="8"> <!----> 8
+        </label><label class="button is-dark"><input type="radio" class="is-hidden" value="9"> <!----> 9
+        </label><label class="button is-dark"><input type="radio" class="is-hidden" value="10"> <!----> 10
+        </label></div> <!----> <p class="help">The number of digits of the generated security codes</p></div> <div class="field"><label class="label">Algorithm</label> <div class="is-toggle buttons"><label class="button is-dark is-link"><input type="radio" class="is-hidden" value="sha1"> <!----> sha1
+        </label><label class="button is-dark"><input type="radio" class="is-hidden" value="sha256"> <!----> sha256
+        </label><label class="button is-dark"><input type="radio" class="is-hidden" value="sha512"> <!----> sha512
+        </label><label class="button is-dark"><input type="radio" class="is-hidden" value="md5"> <!----> md5
+        </label></div> <!----> <p class="help">The algorithm used to secure your security codes</p></div> <div class="field"><label class="label">Period</label> <div class="control"><input id="period" placeholder="Default is 30" value="30" type="text" class="input"></div> 
+		<!-- <p class="help is-danger">The period must be an integer.</p> -->
+		<p class="help">The period of validity of the generated security codes in second</p></div> <!----></div> <footer class="has-background-black-ter"><div class="columns is-gapless"><div class="column has-text-centered"><div class="field is-grouped"><p class="control"><button id='save' type="submit" class="is-rounded button is-link">Save</button></p> <!----> <p class="control"><button id='cancel' type="button" class="button is-text is-rounded">Cancel</button></p></div></div></div> <div class="content has-text-centered">
+		<!-- <a href="https://demo.2fauth.app/settings/options" class="has-text-grey">Settings</a>  -->
+		<span>
+              <a id='signout' class="has-text-grey">Sign out</a></span></div></footer> </div></div></div></main></div></div>
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-database.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script src="./app.js"></script>
+<script>
+editacc();
+let page = 'edit';
+</script>
+</body></html>
