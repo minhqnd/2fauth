@@ -19,9 +19,9 @@ function register() {
 }
 
 function editacc() {
-	if (keyedit==null) {
-		console.log('return to accs');
-	}
+	// if (keyedit==null) {
+		// console.log('return to accs');
+	// }
 	document.querySelector('#save').addEventListener('click', () => {
         editfa()
     })
@@ -30,6 +30,9 @@ function editacc() {
     });
 	document.querySelector('#signout').addEventListener('click', () => {
         signout();
+    })
+	document.querySelector('#remove').addEventListener('click', () => {
+        removekey()
     })
 }
 
@@ -44,6 +47,9 @@ function showedit() {
 		$('#name').val(name);
 		$('#account').val(account);
 		$('#key').val(key);
+		$('#name').attr('placeholder',name);
+		$('#account').attr('placeholder',account);
+		$('#key').attr('placeholder',key);
 		} else {
 			window.open('/accounts', "_self");
 		}
@@ -266,8 +272,8 @@ function editfa() {
 		document.getElementById('account-help').innerHTML = '';
 		if (document.getElementById('key').value !== '') {
 			document.getElementById('key-help').innerHTML = '';
-			if (document.getElementById('key-help').value !== '') {
-			editkey(document.getElementById('name').value, document.getElementById('account').value, document.getElementById('key').value)			
+			if (document.getElementById('name').value !== '') {
+				editkey(document.getElementById('name').value, document.getElementById('account').value, document.getElementById('key').value)			
 			} else {
 				editkey('- no service -', document.getElementById('account').value, document.getElementById('key').value)			
 			}
@@ -288,6 +294,17 @@ firebase.database().ref().child('otp').child(uid).child(keyedit).update({
 });
 window.open('/accounts', "_self");
 console.log('done')
+}
+
+
+function removekey() {
+let text = "Are you sure you want to remove this account?";
+  if (confirm(text) == true) {
+	var uid = firebase.auth().currentUser.uid;
+	firebase.database().ref().child('otp').child(uid).child(keyedit).remove();
+	window.open('/accounts', "_self");
+  } else {
+  }
 }
 
 function createfa() {
