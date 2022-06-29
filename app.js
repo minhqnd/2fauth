@@ -313,7 +313,7 @@ function createfa() {
 		document.getElementById('account-help').innerHTML = '';
 		if (document.getElementById('key').value !== '') {
 			document.getElementById('key-help').innerHTML = '';
-			if (document.getElementById('key').value !== '') {
+			if (document.getElementById('name').value !== '') {
 			sendkey(document.getElementById('name').value, document.getElementById('account').value, document.getElementById('key').value.replace(' ', ''));	
 			} else {
 				sendkey('- no service -', document.getElementById('account').value, document.getElementById('key').value.replace(' ', ''));
