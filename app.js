@@ -347,7 +347,7 @@ function fashow(clicked_id) {
 		$('#account').html(account);
 		$('#name').html(name);
 		$('#sc').html(key);
-		$('figure').html(icon.replace('%ICON%', name.toLowerCase().replace(' ', '')));
+		$('figure').html(icon.replaceAll('%ICON%', name.toLowerCase().replace(' ', '')));
 		updatetotp();
 	})
   }
@@ -482,7 +482,7 @@ function searchacc() {
     }
 }
 
-var icon = `<img src="https://raw.githubusercontent.com/therealstromez/icons/e333d8a74f1a703b14140d2902fc26dc298a95b2/icons/%ICON%.svg" onerror="this.style.display='none';" style="filter: invert(1);">`
+var icon = `<img src="https://raw.githubusercontent.com/therealstromez/icons/e333d8a74f1a703b14140d2902fc26dc298a95b2/icons/%ICON%.svg" onerror="this.style.display='none';" alt="%ICON%" style="filter: invert(1);">`
 
 var vuetext = `<span><div class="vue-notification-wrapper" style="transition: all 0ms ease 0s;"><div class="vue-notification-template notification is-radiusless is-success"><div class="notification-content">%TEXT%</div></div></div></span>`
 // Copied to clipboard
