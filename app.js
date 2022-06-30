@@ -158,7 +158,7 @@ function loadaccounds() {
 	var div = template.replaceAll('%KEY%', bigkey);
 	var div = div.replace('%ACCOUNT%', account);
 	var div = div.replace('%NAME%', name);
-	var div = div.replace('%ICON%', name.toLowerCase().replace(' ', ''));
+	var div = div.replaceAll('%ICON%', name.toLowerCase().replace(' ', ''));
 	$('#list').append(div)
 })
 }
