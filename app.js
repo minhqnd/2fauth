@@ -274,9 +274,9 @@ function editfa() {
 		if (document.getElementById('key').value !== '') {
 			document.getElementById('key-help').innerHTML = '';
 			if (document.getElementById('name').value !== '') {
-				editkey(document.getElementById('name').value, document.getElementById('account').value, document.getElementById('key').value)			
+				editkey(document.getElementById('name').value, document.getElementById('account').value, document.getElementById('key').value.replaceAll(' ', ''))			
 			} else {
-				editkey('- no service -', document.getElementById('account').value, document.getElementById('key').value)			
+				editkey('- no service -', document.getElementById('account').value, document.getElementById('key').value.replaceAll(' ', ''))			
 			}
 		} else {
 			document.getElementById('key-help').innerHTML = 'The secret field is required.';
@@ -314,9 +314,9 @@ function createfa() {
 		if (document.getElementById('key').value !== '') {
 			document.getElementById('key-help').innerHTML = '';
 			if (document.getElementById('name').value !== '') {
-			sendkey(document.getElementById('name').value, document.getElementById('account').value, document.getElementById('key').value.replace(' ', ''));	
+			sendkey(document.getElementById('name').value, document.getElementById('account').value, document.getElementById('key').value.replaceAll(' ', ''));	
 			} else {
-				sendkey('- no service -', document.getElementById('account').value, document.getElementById('key').value.replace(' ', ''));
+				sendkey('- no service -', document.getElementById('account').value, document.getElementById('key').value.replaceAll(' ', ''));
 			}
 		} else {
 			document.getElementById('key-help').innerHTML = 'The secret field is required.';
