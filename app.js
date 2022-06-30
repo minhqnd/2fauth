@@ -352,7 +352,7 @@ function fashow(clicked_id) {
 	})
   }
   
-var template = `<div id='%KEY%' onclick='fashow(this.id)' class="column is-narrow has-text-white tfa-list"><div class="tfa-container"><div class="tfa-cell tfa-content is-size-3 is-size-4-mobile"><div class="tfa-text has-ellipsis"><img src="https://raw.githubusercontent.com/therealstromez/icons/e333d8a74f1a703b14140d2902fc26dc298a95b2/icons/%ICON%.svg" onerror="this.style.display='none';" style="filter: invert(1);"> %NAME%<span class="is-family-primary is-size-6 is-size-7-mobile has-text-grey">%ACCOUNT%</span></div></div><div class="tfa-cell tfa-edit has-text-grey"><a href='/edit?key=%KEY%' class="tag is-dark is-rounded mr-1">Edit</a></div></div></div>`
+var template = `<div id='%KEY%' onclick='fashow(this.id)' class="column is-narrow has-text-white tfa-list"><div class="tfa-container"><div class="tfa-cell tfa-content is-size-3 is-size-4-mobile"><div class="tfa-text has-ellipsis"><img src="https://raw.githubusercontent.com/therealstromez/icons/e333d8a74f1a703b14140d2902fc26dc298a95b2/icons/%ICON%.svg" alt="%ICON%" onerror="this.style.display='none';" style="filter: invert(1);"> %NAME%<span class="has-ellipsis is-family-primary is-size-6 is-size-7-mobile has-text-grey">%ACCOUNT%</span></div></div><div class="tfa-cell tfa-edit has-text-grey"><a href='/edit?key=%KEY%' class="tag is-dark is-rounded mr-1">Edit</a></div></div></div>`
 
 // The secret must be in byte increments.
 // - no service -
